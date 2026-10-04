@@ -105,7 +105,7 @@ def run_proposal_crew(job_post: str, profile: str, hourly_rate: float) -> dict:
         guardrail=proposal_guardrail,
     )
 
-      crew = Crew(
+    crew = Crew(
         agents=[analyzer, pricer, writer],
         tasks=[analyze_task, price_task, write_task],
         process=Process.sequential,
